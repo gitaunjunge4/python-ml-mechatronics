@@ -6,8 +6,8 @@
 #get the resistance values
 #perform I=V/R
 
-#zip() pairs elements from two or more iterables (like lists) together by their indexes
-#re.sub(pattern, replacement, string)-  checks if the str has matches then replaces it with what is specified and returns a string
+#zip() pairs elements from two or more iterables together by their indexes
+#re.sub(pattern, replacement, string)- checks if the str has matches then replaces it with what is specified and returns a stristrng
 
 import re
 
