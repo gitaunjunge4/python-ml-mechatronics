@@ -14,7 +14,8 @@ voltages = [" 12V ", "5 volts", "9.0", "ten", "24.5V"]
 resistances = ["4 ohms", " 2 ", "3.0Ω", "five", "0"]
 
 def cleanNumber(value):
-    cleaned = re.sub(r"[^0-9].\-", "", value)
+    cleaned = re.findall(r"\d+\.\-" , value)
+    print(cleaned)
     try:
         return float(cleaned)
     except ValueError:
@@ -23,14 +24,17 @@ def cleanNumber(value):
 for v, r in zip(voltages, resistances):
     V = cleanNumber(v)
     R = cleanNumber(r)
+    print(V)
+    # print(V)
+    # print(R)
 
-    if V is None or R is None:
-        print(f"Input invalid for {V} and {R}")
-        continue #skips to the next pair in the loop to avoid using invalid data
+#     if V is None or R is None:
+#         print(f"Input invalid for {v} and {r}")
+#         continue #skips to the next pair in the loop to avoid using invalid data
 
-    if R == 0:
-        print(f"Error: Resistance can not be zero{r}")
-        continue
+#     if R == 0:
+#         print(f"Error: Resistance can not be zero{r}")
+#         continue
 
-    I = V / R
-    print(I)
+#     I = V / R
+#     print(I)
