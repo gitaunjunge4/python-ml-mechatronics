@@ -18,9 +18,10 @@ print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
 
 # Find an Euclidian distance between (2, 3) and (10, 8)
-def pyTheorem(a, b):
+def py_theorem(a, b):
     result = (a**2 + b**2)**0.5
-    return result
-print(pyTheorem(2,3))
-print(pyTheorem(10,8))
+    roundedoff_ans = f"{result:.2f}"
+    return roundedoff_ans
+print(py_theorem(2,3))
+print(py_theorem(10,8))
 
