@@ -35,6 +35,3 @@ for m, v in zip(masses, velocities):
     else:
         print(f"Skipping invalid data {Mass}kg, {Velocity}m/s")
 
-
-
-#Use the built-in input function to get first name, last name, country and age from a user and store the value to their corresponding variable names
