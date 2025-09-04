@@ -38,6 +38,15 @@ print(es)
 #           arranges the list in desc order
 #         sorted(): returns the ordered list without modifying the original list
 
+            # plants = conifers + cycads
+            # print(plants)
+            # ordered_plants = sorted(plants)
+            # print(ordered_plants)
+
+            # # ans 2
+            # plants_copy = plants.copy()
+            # plants_copy.sort()
+            # print(plants_copy)
 
 
 # LIST COMPREHENSION 
