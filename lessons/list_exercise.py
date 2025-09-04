@@ -19,14 +19,18 @@
 # print that lst
 # calculate: average temperature, minimum and maximum temperatures,median temperature,  sorted version of the list
 
+#to validate input it needs a helper function
+#function takes prompt as input and evaliuates if it is valid 
+
 
 import statistics
 
+# main function
 def temp_readings():
     temp_list = []
 
     for x in range(7):
-        day_temp = float(input(f'Enter day {x+1} temperature: '))
+        day_temp = val_prompt(f'Enter day {x+1} temperature: ')
         # print(day_temp)
         temp_list.append(day_temp)    
     print(f"Temp list: {temp_list}")
@@ -40,6 +44,17 @@ def temp_readings():
     print(f"Median temp: {median_temp}°C")
     sorted_temp_list = sorted(temp_list)
     print(f"Sorted temp list: {sorted_temp_list}")
+
+
+# helper function
+def val_prompt(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+            return value 
+        
+        except ValueError:
+            print("Please enter valid input.")
 
 temp_readings()
 
