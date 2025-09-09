@@ -4,11 +4,13 @@
 # SET{} vs TUPLE()
 
 # checking a item we use in mebership operator 
+
 # adding items
 # adding items ot a set we use add() example.add(item)
-# adding multiple items: update(), takes a list args. exmaple.update([item1, item2, item3])
+# adding multiple items: update(), takes a list args. example.update([item1, item2, item3])
+
 # removing items
-# remove(), but this raises errors if it isn't found, use discrad() instead
+# remove(), but this raises errors if it isn't found, use discard() instead
 # pop() methods remove a random item from a list and it returns the removed item
 # clearing items
 # st.clear()
