@@ -39,16 +39,17 @@ B = {19, 22, 20, 25, 26, 24, 28, 27}
 age = [22, 19, 24, 25, 26, 24, 25, 24]
 # Exercises: Level 3
 # Convert the ages to a set and compare the length of the list and the set, which one is bigger?
-age_set = set(age)
-print(age_set)
-def len_det():
-    print(f"List is {len(age)} values long")
-    print(f"Set is {len(age_set)} values long")
-    if len(age_set) > len(age):
-        print("The set is longer")
-    else:
-        print("The list is longer")
-len_det()
+# age_set = set(age)
+# print(age_set)
+# def len_det():
+#     print(f"List is {len(age)} values long")
+#     print(f"Set is {len(age_set)} values long")
+#     if len(age_set) > len(age):
+#         print("The set is longer")
+#     else:
+#         print("The list is longer")
+# len_det()
+
 # Explain the difference between the following data types: string, list, tuple and 
     # String: sequence of characters, immutable.
     # List: ordered, mutable collection that allows duplicates. Example: [1, 2, 2, 3].
@@ -58,13 +59,19 @@ len_det()
 # I am a teacher and I love to inspire and teach people. 
 # How many unique words have been used in the sentence? 
 # Use the split methods and set to get the unique words.
-sentence = "I am a teacher and I love to inspire and teach people"
-words = sentence.split()
+
+# to remove punctuation 
+import string 
+
+sentence = "I am a teacher and I love to inspire and teach people."
+keep = "'"
+punct = ''.join(ch for ch in string.punctuation if ch not in keep) #Collect every punctuation character except "'" then joins to str
+table = str.maketrans('', '', punct) # build translation table
+cleaned_sentence = sentence.translate(table) # apply translation (remove punctuation)
+
+words = cleaned_sentence.split()
 print(words)
 sen_set = set(words)
 print(sen_set)
 print(len(sen_set))
 
-# extra bits
-    # removing punctuation
-    # adressing 'I'
