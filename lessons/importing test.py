@@ -195,5 +195,5 @@ countries = [
 ]
 
 # Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
-get_first_ten_countries = filter(lambda x:  , countries)
-print(list(get_first_ten_countries))
+get_first_ten_countries_list = list[filter(countries[:10] , countries)]
+print(get_first_ten_countries_list)
